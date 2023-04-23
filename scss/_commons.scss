@@ -1,0 +1,128 @@
+/* Etiqueta  */
+*{font-family: 'Oswald', sans-serif;
+    font-weight: 400;}
+*{box-sizing: border-box;}
+
+html{font-size: 100%;
+    margin: 0px 10px}
+
+body{background-color: grey;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: auto;
+        }
+
+#h1 {color: rgb(66, 53, 255);
+    font-size: 3em;
+    background-color: rgb(154, 175, 135);
+    margin: 0px 0px 10px 0px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    }
+
+h1 {color: rgb(66, 53, 255);
+        font-size: 3em;
+        background-color: rgb(154, 175, 135);
+        margin: 0px 0px 10px 0px;
+        padding: 10px 0px;
+        border-radius: 10px;
+        }
+
+#h2{color: rgb(66, 53, 255);
+    font-size: 3em;
+    background-color: rgb(154, 175, 135);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px;
+    border-radius: 10px;}
+
+h2 {color: brown;
+    font-size: 2.0em;
+    }
+
+
+h3 {color: rgb(66, 53, 255);
+    font-size: 1.5em
+    }
+
+p {color:whitesmoke;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.3em;
+    }
+
+a:hover{color: brown;
+        }
+
+label {color: whitesmoke;
+        }
+
+.texto-center{text-align: center;
+               color: rgb(66, 53, 255); 
+            }
+
+.img-redondeo{border-radius: 10px 10px;
+              border-style: solid;
+                }
+
+.font-size-a{font-size: 1.2em
+            }
+
+
+header img {display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+}
+
+
+
+
+// Formato para img
+.img{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+// borrar cuando este doncacines bien armado
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+div table tr th {color: rgb(66, 53, 255);}
+div table tr td {color: crimson;}
+
+//Contenedor especial
+.contenedor{background-color: rgba(56, 23, 47, 0.5) ;
+    margin: 10px 0px ;
+    padding: 0px 0px;
+    border-style: solid;
+    border-radius: 10px 10px;}
+
+// Hover
+.imagen-ampliable:hover {
+        transform: scale(1.5);
+      }
+
+//Boostrap Inicio
+    .btn:hover{
+        background-color: red;
+        color: green;}
+    .btn{color: black;
+        background-color: rgb(154, 175, 135);}
+    .card-body{
+        text-align: center
+    }
+    .navbar-toggler{
+        color:black
+    }
+    
+    @media screen and (max-width: 991px) {
+        .small-screen {
+          display: none;
+        }
+      }
+        

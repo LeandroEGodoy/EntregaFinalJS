@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
-/* Selector universal */
+/* Selector universal pasado!*/
 *{font-family: 'Oswald', sans-serif;
     font-weight: 400;}
 *{box-sizing: border-box;}
 
-/* Etiqueta  */
+/* Etiqueta  pasado!*/
 
 html{font-size: 100%;
     margin: 0px 10px}
@@ -44,7 +44,7 @@ h2 {color: brown;
     }
 
 
-h3 {color: blue;
+h3 {color: rgb(66, 53, 255);
     font-size: 1.5em
     }
 
@@ -71,25 +71,7 @@ label {color: whitesmoke;
 
 .font-size-a{font-size: 1.2em
             }
-
-        .location{display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 5px 10px;
-        }
-        .location figure{
-            width: 33%;
-            border:solid 1px black;
-            border-radius: 10px;
-            border-color: gray;
-           }
-        .location figcaption{color:whitesmoke;
-                             font-size: 1.2em;
-                             font-weight: 200;
-                             line-height: 1.3em;
-                            }
-
+/* Nest pasado a media! */
 .video{ display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +81,7 @@ label {color: whitesmoke;
                     width: 50%;
                     height: 400px;
                     }
-
+/* Nest por Pasado! */
 .productos{
     display: flex;
     flex-direction: row;
@@ -151,7 +133,7 @@ label {color: whitesmoke;
 /* ID */
 
 
-/* Decendente */
+/* Decendente Nest Pasado!*/
 
 .nav {background-color: rgb(154, 175, 135);
     border-style: solid;
@@ -181,7 +163,7 @@ label {color: whitesmoke;
                              text-decoration: none;
                             }            
 
-
+/* Pasado a commons! */
 header img {display: block;
     margin-left: auto;
     margin-right: auto;
@@ -200,7 +182,7 @@ header img {display: block;
   }
 
 
-div table tr th {color: blue;}
+div table tr th {color: rgb(66, 53, 255);}
     div table tr td {color: crimson;}
 
 /* Flex */
@@ -226,7 +208,7 @@ div h3 {position: relative}
 .position3{bottom: 300px; left: 0px; z-index: 1;} */
 
 
-/* Grid */
+/* Grid nest ver si lo paso*/
 
 .merch{
     display: grid;
@@ -307,7 +289,7 @@ div h3 {position: relative}
     .merch section{
         border-radius: 10px;
     }
-
+/* Nest por pasado! */
     .filters{
         padding: 0 20px 30px 30px;
     }
@@ -346,7 +328,7 @@ div h3 {position: relative}
             list-style: none;
             list-style-image: url(../img/iconos/king-poring-1-unscreen.gif);
         }
-    
+   /*Nest por pasado!  */
     .actions{
         display: flex;
         justify-content: flex-end;
@@ -370,7 +352,7 @@ div h3 {position: relative}
     }
     
 
-
+/* Nest por pasado! */
 .footer{
     display: flex;
     justify-content: space-between;
@@ -389,7 +371,7 @@ div h3 {position: relative}
 
     }
 
-
+/* Pasado */
 .imagen-ampliable:hover {
         transform: scale(1.5);
       }
@@ -417,7 +399,7 @@ div h3 {position: relative}
 /* 1er Break Point */
 
 
-/* Boostrap Inicio */
+/* Boostrap Inicio Pasado */
 .btn:hover{
     background-color: red;
     color: green;}

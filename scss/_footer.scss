@@ -1,0 +1,17 @@
+//Footer
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    svg{
+        width: 30px;
+    }
+    ul{
+        list-style: none;
+        ul li a{
+        text-decoration: none;
+        font-size: 1.0em;
+        }
+    }
+}
