@@ -1,6 +1,6 @@
 /* Etiqueta  */
 *{font-family: 'Oswald', sans-serif;
-    font-weight: 400;}
+    font-weight: $mainFontWeight;}
 *{box-sizing: border-box;}
 
 html{font-size: 100%;
@@ -12,60 +12,51 @@ body{background-color: grey;
     height: auto;
         }
 
-#h1 {color: rgb(66, 53, 255);
-    font-size: 3em;
-    background-color: rgb(154, 175, 135);
-    margin: 0px 0px 10px 0px;
-    padding: 10px 0px;
-    border-radius: 10px;
-    }
-
-h1 {color: rgb(66, 53, 255);
-        font-size: 3em;
-        background-color: rgb(154, 175, 135);
+h1 {color: $mainColor;
+        font-size: $textXl;
+        background-color: $backgroundColor2;
         margin: 0px 0px 10px 0px;
         padding: 10px 0px;
-        border-radius: 10px;
+        border-radius: $borderRadius;
         }
 
-#h2{color: rgb(66, 53, 255);
-    font-size: 3em;
-    background-color: rgb(154, 175, 135);
+#h2{color: $colorH2;
+    font-size: $textXl;
+    background-color: $backgroundColor2;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px;
-    border-radius: 10px;}
+    border-radius: $borderRadius;}
 
-h2 {color: brown;
-    font-size: 2.0em;
+h2 {color: $colorH2V1;
+    font-size: $textL;
     }
 
 
-h3 {color: rgb(66, 53, 255);
-    font-size: 1.5em
+h3 {color: $colorH3;
+    font-size: $textM;
     }
 
-p {color:whitesmoke;
-    font-size: 1.2em;
+p {color: $colorPar;
+    font-size: $textS;
     text-align: center;
-    font-weight: 200;
+    font-weight: $secundaryFontWeight;
     line-height: 1.3em;
     }
 
 a:hover{color: brown;
         }
 
-label {color: whitesmoke;
+label {color: white;
         }
 
 .texto-center{text-align: center;
-               color: rgb(66, 53, 255); 
             }
 
 .img-redondeo{border-radius: 10px 10px;
-              border-style: solid;
+              border-style: $borderStyle;
                 }
 
-.font-size-a{font-size: 1.2em
+.font-size-a{font-size: $textS;
             }
 
 
@@ -96,23 +87,23 @@ div table tr th {color: rgb(66, 53, 255);}
 div table tr td {color: crimson;}
 
 //Contenedor especial
-.contenedor{background-color: rgba(56, 23, 47, 0.5) ;
+.contenedor{background-color: $backgroundColorCon ;
     margin: 10px 0px ;
     padding: 0px 0px;
-    border-style: solid;
-    border-radius: 10px 10px;}
+    border-style: $borderStyle;
+    border-radius: $borderRadius;}
 
 // Hover
 .imagen-ampliable:hover {
-        transform: scale(1.5);
+        transform: $transformMain;
       }
 
 //Boostrap Inicio
     .btn:hover{
-        background-color: red;
+        background-color: $backgroundColor3;
         color: green;}
-    .btn{color: black;
-        background-color: rgb(154, 175, 135);}
+    .btn{color: $color2;
+        background-color: $backgroundColor2;}
     .card-body{
         text-align: center
     }

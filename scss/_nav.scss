@@ -1,7 +1,7 @@
 //Nav dar variables
 .nav{background-color: rgb(154, 175, 135);
-    border-style: solid;
-    border-radius: 10px 10px;
+    border-style: $borderStyle;
+    border-radius: $borderRadius;
     height: auto;
     position:sticky;
     width: 100%;
@@ -14,8 +14,8 @@
         display: flex;
         list-style-image: url(../img/iconos/king-poring-1-unscreen.gif);
         li{margin-right: 30px;
-            a{ font-size: 1.2em;
-                color: rgb(66, 53, 255);
+            a{ font-size: $textS;
+                color: $mainColor;
                text-decoration: none;
             }
         }

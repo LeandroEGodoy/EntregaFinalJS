@@ -21,15 +21,6 @@ body {
   height: auto;
 }
 
-#h1 {
-  color: rgb(66, 53, 255);
-  font-size: 3em;
-  background-color: rgb(154, 175, 135);
-  margin: 0px 0px 10px 0px;
-  padding: 10px 0px;
-  border-radius: 10px;
-}
-
 h1 {
   color: rgb(66, 53, 255);
   font-size: 3em;
@@ -71,12 +62,11 @@ a:hover {
 }
 
 label {
-  color: whitesmoke;
+  color: white;
 }
 
 .texto-center {
   text-align: center;
-  color: rgb(66, 53, 255);
 }
 
 .img-redondeo {
@@ -121,7 +111,7 @@ div table tr td {
   margin: 10px 0px;
   padding: 0px 0px;
   border-style: solid;
-  border-radius: 10px 10px;
+  border-radius: 10px;
 }
 
 .imagen-ampliable:hover {
@@ -154,7 +144,7 @@ div table tr td {
 .nav {
   background-color: rgb(154, 175, 135);
   border-style: solid;
-  border-radius: 10px 10px;
+  border-radius: 10px;
   height: auto;
   position: sticky;
   width: 100%;
@@ -228,7 +218,7 @@ div table tr td {
 }
 .footer ul ul li a {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .productos {
@@ -271,6 +261,55 @@ div table tr td {
 .productos figure button button:hover {
   background-color: green;
   cursor: pointer;
+}
+
+.merch {
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr);
+  grid-template-rows: 80px repeat(3, 300px);
+  gap: 5px;
+  grid-template-areas: "actions actions actions" "filters uno uno" "filters dos tres" "filters dos cuatro";
+}
+.merch .actions {
+  padding: 0 30px;
+  grid-area: actions;
+}
+.merch .filters {
+  grid-area: filters;
+}
+.merch .prod1 {
+  grid-area: uno;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.merch .prod1 p {
+  width: 55%;
+  margin-left: 50px;
+}
+.merch .prod2 {
+  grid-area: dos;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.merch .prod3 {
+  grid-area: tres;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.merch .prod4 {
+  grid-area: cuatro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.merch section {
+  border-radius: 10px;
 }
 
 .filters {
