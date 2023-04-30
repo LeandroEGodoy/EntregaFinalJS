@@ -35,6 +35,11 @@ h2 {color: $colorH2V1;
 h3 {color: $colorH3;
     font-size: $textM;
     }
+#p{color:$color3;
+    font-size: $textM;
+    font-weight: $mainFontWeight;
+    font-style: $mainFont;
+}
 
 p {color: $colorPar;
     font-size: $textS;
@@ -99,21 +104,20 @@ div table tr td {color: crimson;}
       }
 
 //Boostrap Inicio
-    .btn:hover{
+.btn:hover{
         background-color: $backgroundColor3;
         color: green;}
-    .btn{color: $color2;
+.btn{color: $color2;
         background-color: $backgroundColor2;}
-    .card-body{
+.card-body{
         text-align: center
     }
-    .navbar-toggler{
+.navbar-toggler{
         color:black
     }
     
-    @media screen and (max-width: 991px) {
+@media screen and (max-width: 991px) {
         .small-screen {
           display: none;
         }
-      }
-        
+      } 
