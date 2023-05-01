@@ -60,7 +60,7 @@ label {color: white;
 .texto-center{text-align: center;
             }
 
-.img-redondeo{border-radius: 10px 10px;
+.img-redondeo{border-radius: $borderRadius;
               border-style: $borderStyle;
                 }
 
@@ -72,17 +72,7 @@ header img {display: block;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 100%;
-}
-
-
-
-
-// Formato para img
-.img{display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-}
+            }
 
 // borrar cuando este doncacines bien armado
 .table {

@@ -13,7 +13,32 @@
     animation-name: animateLogin;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    border-radius: $borderRadius;
 }
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-x {
+    width: calc(33.33% - 10px);
+    position: relative;
+  }
+  
+  .image-x:hover .image {
+    transform: rotateY(360deg);
+  }
+  
+  .image {
+    width: 100%;
+        transition: transform 0.5s ease;
+    backface-visibility: visible;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
 
 
 //Button
