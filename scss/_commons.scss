@@ -15,17 +15,20 @@ body{background-color: grey;
 h1 {color: $mainColor;
         font-size: $textXl;
         background-color: $backgroundColor2;
-        margin: 0px 0px 10px 0px;
-        padding: 10px 0px;
+        border-style: $borderStyle;
+        border-color: $borderColor;
+        margin: 10px 0px 0px 0px;
+        padding: 5px 0px;
         border-radius: $borderRadius;
-        }
+}
 
 #h2{color: $colorH2;
     font-size: $textXl;
     background-color: $backgroundColor2;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px;
-    border-radius: $borderRadius;}
+    border-radius: $borderRadius;
+}
 
 h2 {color: $colorH2V1;
     font-size: $textL;
@@ -97,6 +100,7 @@ div table tr td {color: crimson;}
     padding: 0px 0px;
     border-style: $borderStyle;
     border-radius: $borderRadius;}
+
 
 // Hover
 .imagen-ampliable:hover {

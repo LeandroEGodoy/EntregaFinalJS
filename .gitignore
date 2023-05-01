@@ -1,5 +1,5 @@
-*.
-*.
-*.
-*.
+*.psd
+*.ai
+*.log
+*.map
 node_modules/  
