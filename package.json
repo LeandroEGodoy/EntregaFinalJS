@@ -6,11 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass",
-		"sass:watch": "sass --watch scss/main.scss  css/ro1.css"
+    "sass:watch": "sass --watch scss/main.scss  css/ro1.css"
   },
   "author": "LeandroEGodoy",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "wow.js": "^1.2.2"
   }
 }
