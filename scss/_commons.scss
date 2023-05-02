@@ -81,8 +81,8 @@ header img {display: block;
     max-width: 100%;
 }
 
-div table tr th {color: rgb(66, 53, 255);}
-div table tr td {color: crimson;}
+div table tr th {color: $color1;}
+div table tr td {color: $color4;}
 
 //Contenedor especial
 .contenedor{background-color: $backgroundColorCon ;

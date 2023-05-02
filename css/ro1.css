@@ -101,11 +101,11 @@ header img {
 }
 
 div table tr th {
-  color: rgb(66, 53, 255);
+  color: white;
 }
 
 div table tr td {
-  color: crimson;
+  color: yellow;
 }
 
 .contenedor {
