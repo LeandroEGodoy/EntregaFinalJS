@@ -1,3 +1,32 @@
+//extends
+.contenedor-gral{background-color: $backgroundColorCon ;
+    margin: 10px 0px ;
+    padding: 0px 0px;
+    border-style: $borderStyle;
+    border-radius: $borderRadius;
+
+}
+.contenedor-bd-cl{
+    @extend .contenedor-gral;
+    border-color: $color4;
+}
+
+.img-redondeo-gral{border-radius: $borderRadius;
+    border-style: $borderStyle;
+      }
+      .img-redondeo-bg-cl{
+          @extend .img-redondeo-gral;
+          border-color: red;
+          background-color: aqua;
+          }
+//mixin
+@mixin textos ($size,$text,$color,$align,$weight,){
+ font-size: $textS;
+ text-align: center ;
+ font-weight: $secundaryFontWeight;
+ color: $colorPar;
+ line-height: $textS;  
+}
 @mixin flex1 ($direction,$justify,$align,$wrap){
     display: flex;
     flex-direction: $direction;
@@ -6,8 +35,7 @@
     flex-wrap: $wrap;
 }
 
-//.contenedor-secondary{
-    //@extend .contenedor;
-   // background-color: $backgroundColorCon2;
-   // margin: 0px 0px;
-//}
+
+
+//maps falta generar mapas.
+$paletaL:()

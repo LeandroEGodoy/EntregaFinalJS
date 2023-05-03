@@ -403,4 +403,26 @@ div table tr td {
   transition: none;
 }
 
+.contenedor-gral, .contenedor-bd-cl {
+  background-color: rgba(56, 23, 47, 0.5);
+  margin: 10px 0px;
+  padding: 0px 0px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.contenedor-bd-cl {
+  border-color: yellow;
+}
+
+.img-redondeo-gral, .img-redondeo-bg-cl {
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.img-redondeo-bg-cl {
+  border-color: red;
+  background-color: aqua;
+}
+
 /*# sourceMappingURL=ro1.css.map */
