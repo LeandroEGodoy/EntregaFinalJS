@@ -1,20 +1,26 @@
 //Animation
 @keyframes animateLogin {
-0%{background-image: url(../img/header/Login.jpg)}
-25%{background-image: url(../img/header/info2.png)}
-50%{background-image: url(../img/header/Login.jpg)}
-75%{background-image: url(../img/header/info2.png)}
-100%{background-image: url(../img/header/Login.jpg)}
+0%{background-image: url(../img/tiny/Dona11.jpg)}
+25%{background-image: url(../img/tiny/Dona22.jpg)}
+50%{background-image: url(../img/tiny/Dona33.jpg)}
+75%{background-image: url(../img/tiny/Dona44.jpg)}
+100%{background-image: url(../img/tiny/Dona55.jpg)}
 }
 
 .animate-login{
-    height: 45vh;
-    background-size: contain;
+    width: 800px;
+    height: 404px;
+    background-size: cover;
     animation-name: animateLogin;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     border-radius: $borderRadius;
-}
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .images-container {
     display: flex;
