@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: rgb(53, 54, 52);
+  background-color: rgb(24, 24, 24);
   background-repeat: repeat;
   background-attachment: fixed;
   height: auto;
@@ -25,10 +25,9 @@ h1 {
   color: rgb(243, 180, 6);
   font-size: 3em;
   background-color: rgb(47, 77, 21);
-  border-style: solid;
-  border-color: black;
-  margin: 10px 0px 0px 0px;
-  padding: 5px 0px;
+  border-color: rgba(194, 109, 52, 0.164);
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px;
   border-radius: 10px;
 }
 
@@ -109,7 +108,7 @@ div table tr td {
 }
 
 .contenedor {
-  background-color: rgba(56, 23, 47, 0.5);
+  background-color: rgba(194, 109, 52, 0.164);
   margin: 10px 0px;
   padding: 0px 0px;
   border-style: solid;
@@ -411,7 +410,7 @@ div table tr td {
 }
 
 .contenedor-gral, .contenedor-bd-cl {
-  background-color: rgba(56, 23, 47, 0.5);
+  background-color: rgba(194, 109, 52, 0.164);
   margin: 10px 0px;
   padding: 0px 0px;
   border-style: solid;
