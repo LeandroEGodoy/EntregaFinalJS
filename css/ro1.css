@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 /* Etiqueta  */
 * {
@@ -329,6 +330,16 @@ div table tr td {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .animate-login {
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+}
+@media (max-width: 480px) {
+  .animate-login {
+    width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+}
 .container {
   display: flex;
   justify-content: center;

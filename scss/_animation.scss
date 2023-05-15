@@ -16,6 +16,19 @@
     animation-iteration-count: infinite;
     border-radius: $borderRadius;
   }
+  @media (max-width: 768px) {
+    .animate-login {
+      width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .animate-login {
+      width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+  }
+
+
 .container {
     display: flex;
     justify-content: center;
