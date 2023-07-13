@@ -2,7 +2,11 @@
 trabajoDeCoder
 
 Buena dias/tardes/noches,
-                         Laura/Vero espero esten bien, lamentablemente no le pude dar todo el amor que me ubiera gustado pero por problemas de trabajo y de salud esta ultima semana no pude avanzar casi nada. Me disculpo de ante mano por no darles un trabajo a la altura pero bueno a continuacion paso a detallar la web.
+                        
+# JS
+Se incluyo un carrito de compras con la intencion de poder vender productos y un formulario de creacion de cuenta para el mismo.
+
+Me costo por falta de tiempo y trabajo, mis disculpas.
                         
 # ragnaClub
 

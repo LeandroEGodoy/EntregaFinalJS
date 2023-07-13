@@ -1,4 +1,4 @@
-// Lista de productos disponibles
+// Lista de productos
 const products = [
   {
     title: "Figura Knight",
@@ -45,7 +45,6 @@ const products = [
 // Carrito de compras
 let cart = [];
 
-// Función para agregar un producto al carrito
 function agregarAlCarrito(title, price) {
   const product = {
     title: title,
@@ -56,7 +55,6 @@ function agregarAlCarrito(title, price) {
   mostrarMensajeEmergente(title);
 }
 
-// Función para mostrar un mensaje emergente
 function mostrarMensajeEmergente(productTitle) {
   Swal.fire({
     icon: 'success',
@@ -68,13 +66,10 @@ function mostrarMensajeEmergente(productTitle) {
 }
 
 function realizarCompra() {
-  // Procesar la transacción aquí
 
-  // Vaciar el carrito después de realizar la compra
   cart = [];
   mostrarCarrito();
 
-  // Mostrar mensaje de confirmación de transacción exitosa
   Swal.fire({
     icon: 'success',
     title: '¡Compra realizada!',
@@ -84,19 +79,15 @@ function realizarCompra() {
   });
 }
 
-
-// Función para mostrar el carrito de compras
 function mostrarCarrito() {
   const carritoContainer = document.getElementById("carritoContainer");
-  carritoContainer.innerHTML = ""; // Limpiar el contenido anterior
+  carritoContainer.innerHTML = "";
 
-  // Crear un objeto para rastrear la cantidad de cada producto
   const productQuantity = {};
 
   for (let i = 0; i < cart.length; i++) {
     const product = cart[i];
 
-    // Incrementar la cantidad del producto o establecerla en 1 si es la primera vez
     if (product.title in productQuantity) {
       productQuantity[product.title]++;
     } else {
@@ -123,7 +114,7 @@ function mostrarCarrito() {
 
   mostrarTotal();
 }
-// Función para mostrar el total del carrito
+
 function mostrarTotal() {
   const totalContainer = document.getElementById("totalContainer");
   const realizarCompraBtn = document.getElementById("realizarCompraBtn");
@@ -137,7 +128,8 @@ function mostrarTotal() {
     realizarCompraBtn.style.display = "none";
   }
 }
-// Función para eliminar un producto del carrito
+
+
 function eliminarDelCarrito(title) {
   cart = cart.filter(product => product.title !== title);
   mostrarCarrito();
