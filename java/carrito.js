@@ -51,9 +51,27 @@ function agregarAlCarrito(title, price) {
     price: price
   };
   cart.push(product);
+  guardarCarritoEnLocalStorage();
   mostrarCarrito();
   mostrarMensajeEmergente(title);
 }
+
+
+function cargarCarritoDesdeLocalStorage() {
+  const cartData = localStorage.getItem("cart");
+  if (cartData) {
+    cart = JSON.parse(cartData);
+    mostrarCarrito();
+  }
+}
+
+
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+
+cargarCarritoDesdeLocalStorage();
 
 function mostrarMensajeEmergente(productTitle) {
   Swal.fire({
