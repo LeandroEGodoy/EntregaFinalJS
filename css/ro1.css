@@ -441,4 +441,25 @@ div table tr td {
   background-color: aqua;
 }
 
+
+.carrito-container {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.total-container {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: right;
+  padding: 10px;
+  color:red
+}
 /*# sourceMappingURL=ro1.css.map */

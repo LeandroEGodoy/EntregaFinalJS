@@ -10,63 +10,85 @@
     <meta name="author" content="Leandro E Godooy">
     <meta name="keywords" content="Ragnarok, Online, Server, Donaciones, Diversion, Figuras">
     <meta name="copyright" content="RagnaClub Online">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<link rel="shortcut icon" href="../img/iconos/poring.png" type="image/x-icon">
-<link rel="stylesheet" href="../css/ro1.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/iconos/poring.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/ro1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 </head>
-</html>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
     <!-- Inicia nav boost  -->
     <nav class="nav navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"> <img class="img-redondeo" src="../img/banners/banner-probar.jpg" alt="Logo principal de Ragnarok Online"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse animate__animated animate__flash" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="info.html">Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="download.html">Download</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="donaciones.html">Donation</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"> <img class="img-redondeo" src="../img/banners/banner-probar.jpg" alt="Logo principal de Ragnarok Online"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse animate__animated animate__flash" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info.html">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="download.html">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donaciones.html">Donation</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+  </nav>
      <!-- fin de navegacion -->
-    <header class="mt-2">
-        <img class="img-redondeo" src="../img/header/Merchandising.jpeg" alt="Imagen Ragnarok Online Merchandising"></a>
-    </header>
-    <main>
-        <Section>
-            <div class="contenedor"><h1 class="texto-center">Ragnarok Online Merchandising</h1></div>
-            <h2 class="texto-center mt-2"><strong>Productos destacados</strong></h2>
-        </Section>
-<!-- fin de main -->
-<section class="contenedor">
-     <div class="row">
+     <header class="mt-2">
+      <img class="img-redondeo" src="../img/header/Merchandising.jpeg" alt="Imagen Ragnarok Online Merchandising"></a>
+  </header>
+  <main>
+      <section>
+          <div class="contenedor"><h1 class="texto-center">Ragnarok Online Merchandising</h1></div>
+          <h2 class="texto-center mt-2"><strong>Productos destacados</strong></h2>
+      </section>
+      <!-- fin de main -->
+      <div class="carrito-container carrito-item" id="carritoContainer"></div>
+
+      <div class="total-container" id="totalContainer"></div>
+      <button id="realizarCompraBtn" onclick="realizarCompra()" style="display: none;">Realizar compra</button>
+      <section>
+          <select id="filtro">
+              <!-- opciones de filtro -->
+          </select>
+      </section>
+
+        <section class="contenedor">
+            <div class="row" id="productsRow">
+      <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card mx-2 m-2">
+              <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
+              <div class="card-body">
+                  <h5 class="card-title">Figura Knight</h5>
+                  <p class="card-text" id="p">Figura Ragnarok</p>
+                  <div>
+                      <button type="button" class="buttonGif" onclick="agregarAlCarrito('Figura Knight', 10.99)">Buy</button>
+                  </div>         
+              </div>
+          </div>
+      </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Figura High Priest</h5>
+            <p class="card-text" id="p">Figura Ragnarok</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Figura High Priest', 12.99)">Buy</button>
           </div>         
           </div>
         </div>
@@ -75,22 +97,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Figura Assasin</h5>
+            <p class="card-text" id="p">Figura Ragnarok</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
-          </div>         
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card mx-2 m-2">
-          <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
-          <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
-          <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Figura Assasin', 15.99)">Buy</button>
           </div>         
           </div>
         </div>
@@ -99,10 +109,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Figura Poring</h5>
+            <p class="card-text" id="p">Figura Ragnarok</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Figura Poring', 9.99)">Buy</button>
           </div>         
           </div>
         </div>
@@ -111,10 +121,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Mochila Poring</h5>
+            <p class="card-text" id="p">Accesorios</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Mochila Poring', 30.00)">Buy</button>
           </div>         
           </div>
         </div>
@@ -123,10 +133,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Mochila Angeling</h5>
+            <p class="card-text" id="p">Accesorios</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Mochila Angeling', 15.50)">Buy</button>
           </div>         
           </div>
         </div>
@@ -135,10 +145,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Remera Poring</h5>
+            <p class="card-text" id="p">Ropa</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Remera Poring', 13.00)">Buy</button>
           </div>         
           </div>
         </div>
@@ -147,10 +157,10 @@
         <div class="card mx-2 m-2">
           <img src="../img/merchandising/PJacomu1Escala.png" class="card-img-top" alt="Imagen de Figura de Coleccion de Ragnarok">
           <div class="card-body">
-            <h5 class="card-title">Figura Knight</h5>
-            <p class="card-text" id="p">Figura coleccionable Ragnarok</p>
+            <h5 class="card-title">Remera Poporing</h5>
+            <p class="card-text" id="p">Ropa</p>
           <div>
-            <button type="button" class="buttonGif"><a href="https://mercadolibre.com.ar/" target=_blank alt="Boton de compra">Buy</a></button>
+            <button type="button" class="buttonGif" onclick="agregarAlCarrito('Remera Poporing', 14.00)">Buy</button>
           </div>         
           </div>
         </div>
@@ -165,58 +175,94 @@
     <footer class="footer contenedor">
       <div>
           <section class="contendor text-center">       
-          <a href="https://www.instagram.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="#F77737" class="bi bi-instagram" viewBox="0 0 16 16">
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-            </svg></a>
+              <a href="https://www.instagram.com/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="#F77737" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                  </svg>
+              </a>
 
-          <a href="https://twitter.com/" target="_blank">
-           <svg xmlns="http://www.w3.org/2000/svg"  fill="#00acee" class="bi bi-twitter" viewBox="0 0 16 16">
-              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-            </svg></a>
+              <a href="https://twitter.com/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="#00acee" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg>
+              </a>
 
-            <a href="https://es-la.facebook.com/" target="_blank">
-           <svg xmlns="http://www.w3.org/2000/svg"  fill="#3b5998" class="bi bi-facebook" viewBox="0 0 16 16">
-           <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-           </svg></a>
+              <a href="https://es-la.facebook.com/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="#3b5998" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg>
+              </a>
 
-          <a href="https://www.twitch.tv/" target="_blank">
-           <svg xmlns="http://www.w3.org/2000/svg"  fill="#6441a" class="bi bi-twitch" viewBox="0 0 16 16">
-             <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
-             <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
-           </svg></a>
+              <a href="https://www.twitch.tv/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="#6441a" class="bi bi-twitch" viewBox="0 0 16 16">
+                      <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                      <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                  </svg>
+              </a>
           </section>
       </div>
+
       <ul>
           <li>
-              <a href="#"> Terminos y condiciones</a>
+              <a href="#">Terminos y condiciones</a>
           </li>
           <li>
-              <a href="#"> quines somos</a>
+              <a href="#">Quines somos</a>
           </li>
           <li>
-              <a href="#"> Terminos y condiciones</a>
+              <a href="#">Terminos y condiciones</a>
           </li>
           <li>
-              <a href="#"> quines somos</a>
+              <a href="#">Quines somos</a>
           </li>
       </ul>
 
       <ul>
           <li>
-              <a href="#"> Terminos y condiciones</a>
+              <a href="#">Terminos y condiciones</a>
           </li>
           <li>
-              <a href="#"> quines somos</a>
+              <a href="#">Quines somos</a>
           </li>
           <li>
-              <a href="#"> Terminos y condiciones</a>
+              <a href="#">Terminos y condiciones</a>
           </li>
           <li>
-              <a href="#"> quines somos</a>
+              <a href="#">Quines somos</a>
           </li>
       </ul>
   </footer>
   <!-- Fin de Footer -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form id="registroForm">
+                    <div class="form-group"></div>
+                    Registro para poder comprar en la web
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" class="form-control" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" class="form-control" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+<script src="../java/mi_script.js"></script>
+<script src="../java/carrito.js"></script>
 </html>
