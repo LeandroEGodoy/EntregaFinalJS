@@ -1,3 +1,5 @@
+Base de lo que quiero realizar en mi trabajo de coder.
+
 Carro de compras, agregar y eliminar productos.
 Formulario para crear una cuenta y poder comprar.
 Total de precio y poder realizar la compra.

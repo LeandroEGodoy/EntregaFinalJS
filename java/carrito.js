@@ -1,46 +1,3 @@
-// Lista de productos
-const products = [
-  {
-    title: "Figura Knight",
-    description: "Figura Ragnarok",
-    price: 10.99
-  },
-  {
-    title: "Figura High Priest",
-    description: "Figura Ragnarok",
-    price: 10.99
-  },
-  {
-    title: "Figura Assasin",
-    description: "Figura Ragnarok",
-    price: 10.99
-  },
-  {
-    title: "Figura Poring",
-    description: "Figura Ragnarok",
-    price: 10.99
-  },
-  {
-    title: "Mochila Poring",
-    description: "Accesorios",
-    price: 10.99
-  },
-  {
-    title: "Mochila Angeling",
-    description: "Accesorios",
-    price: 10.99
-  },
-  {
-    title: "Remera Poring",
-    description: "Ropa",
-    price: 10.99
-  },
-  {
-    title: "Remera Poporing",
-    description: "Ropa",
-    price: 10.99
-  }
-];
 
 // Carrito de compras
 let cart = [];
@@ -84,8 +41,8 @@ function mostrarMensajeEmergente(productTitle) {
 }
 
 function realizarCompra() {
-
   cart = [];
+  guardarCarritoEnLocalStorage();
   mostrarCarrito();
 
   Swal.fire({
@@ -150,32 +107,49 @@ function mostrarTotal() {
 
 function eliminarDelCarrito(title) {
   cart = cart.filter(product => product.title !== title);
+  guardarCarritoEnLocalStorage();
   mostrarCarrito();
 }
 
 
 // Filtro
 
-const uniqueCategories = [...new Set(products.map(product => product.description))];
+let products = [];
 
-const filtroSelect = document.getElementById("filtro");
+// Obtener datos del archivo products.json
+fetch('../json/products.json')
+  .then(response => response.json())
+  .then(data => {
+    products = data.products;
+    cargarFiltro();
+  })
+  .catch(error => console.error('Error al obtener los datos del archivo products.json:', error));
 
-const optionTodos = document.createElement("option");
-optionTodos.value = "all";
-optionTodos.textContent = "Todos";
-filtroSelect.appendChild(optionTodos);
+function cargarFiltro() {
+  const uniqueCategories = [...new Set(products.map(product => product.description))];
 
-uniqueCategories.forEach(category => {
-  const option = document.createElement("option");
-  option.value = category;
-  option.textContent = category;
-  filtroSelect.appendChild(option);
-});
+  const filtroSelect = document.getElementById("filtro");
+  filtroSelect.innerHTML = ""; // Limpiar opciones previas antes de cargar nuevas opciones
 
-filtroSelect.addEventListener("change", function() {
-  const selectedCategory = this.value;
-  filterProductsByCategory(selectedCategory);
-});
+  const optionTodos = document.createElement("option");
+  optionTodos.value = "all";
+  optionTodos.textContent = "Todos";
+  filtroSelect.appendChild(optionTodos);
+
+  uniqueCategories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category;
+    filtroSelect.appendChild(option);
+  });
+
+  filtroSelect.addEventListener("change", function() {
+    const selectedCategory = this.value;
+    filterProductsByCategory(selectedCategory);
+  });
+
+  filterProductsByCategory("all");
+}
 
 function filterProductsByCategory(category) {
   const productsRow = document.getElementById("productsRow");
@@ -194,3 +168,11 @@ function filterProductsByCategory(category) {
 }
 
 filterProductsByCategory("all");
+
+// Mostrar mensaje si el carrito está vacío
+function mostrarMensajeCarritoVacio() {
+  const carritoContainer = document.getElementById("carritoContainer");
+  if (cart.length === 0) {
+    carritoContainer.innerHTML = "El carrito está vacío.";
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "products": [
+      {
+        "title": "Figura Knight",
+        "price": 10.99,
+        "description": "Figura Ragnarok"
+        
+      },
+      {
+        "title": "Figura High Priest",
+        "price": 10.99,
+        "description": "Figura Ragnarok"
+        
+      },
+      {
+        "title": "Figura Assasin",
+        "price": 10.99,
+        "description": "Figura Ragnarok"
+        
+      },
+      {
+        "title": "Figura Poring",
+        "price": 10.99,
+        "description": "Figura Ragnarok"
+        
+      },
+      {
+        "title": "Mochila Poring",
+        "price": 10.99,
+        "description": "Accesorios"
+        
+      },
+      {
+        "title": "Mochila Angeling",
+        "price": 10.99,
+        "description": "Accesorios"
+
+        
+      },
+      {
+        "title": "Remera Poring",
+        "price": 10.99,
+        "description": "Ropa"
+                
+      },
+      {
+        "title": "Remera Poporing",
+        "price": 10.99,
+        "description": "Ropa"
+        
+      }
+    ]
+  }

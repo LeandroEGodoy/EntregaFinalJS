@@ -462,4 +462,155 @@ div table tr td {
   padding: 10px;
   color:red
 }
+
+.payment-methods {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 120px;
+}
+
+.payment-icon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.payment-icon span {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-content {
+  margin-bottom: 10px;
+}
+
+input, button {
+  margin-bottom: 10px;
+}
+
+/* Estilos adicionales para el contenido de tu página */
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Estilos para el formulario de registro */
+#registroForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#registroForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#registroForm input[type="text"],
+#registroForm input[type="email"],
+#registroForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#registroForm button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#registroForm button:hover {
+  background-color: #45a049;
+}
+
+#registroForm .error-message {
+  color: #FF0000;
+  margin-bottom: 10px;
+}
+
+
+.mensaje-registro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+
+.mensaje-registro-content {
+  text-align: center;
+}
+
+.mensaje-registro h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.mensaje-registro p {
+  font-size: 18px;
+}
+
+/* Animación con Animate.css */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+.animate__fadeOut {
+  animation-name: fadeOut;
+}
+
 /*# sourceMappingURL=ro1.css.map */
