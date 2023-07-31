@@ -674,6 +674,11 @@ h1 {
   margin-right: 10px; /* Espaciado entre botones de realizar compra y limpiar carrito */
 }
 
+.precio-rojo {
+  color: green;
+  font-weight: bold;
+}
+
 /* Estilos al pasar el mouse sobre los botones */
 .buttonGif:hover {
   background-color: #E65100; /* Color de fondo al pasar el mouse */
