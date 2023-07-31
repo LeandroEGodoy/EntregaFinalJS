@@ -1,4 +1,3 @@
-
 // Carrito de compras
 let cart = [];
 
@@ -70,7 +69,7 @@ function mostrarCarrito() {
     }
   }
 
-  for (const title in productQuantity) {
+    for (const title in productQuantity) {
     const quantity = productQuantity[title];
     const productItem = document.createElement("div");
     productItem.classList.add("carrito-item");
@@ -81,6 +80,7 @@ function mostrarCarrito() {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Eliminar";
+    deleteButton.classList.add("deleteButton");
     deleteButton.addEventListener("click", () => eliminarDelCarrito(title));
     productItem.appendChild(deleteButton);
 
@@ -93,37 +93,76 @@ function mostrarCarrito() {
 function mostrarTotal() {
   const totalContainer = document.getElementById("totalContainer");
   const realizarCompraBtn = document.getElementById("realizarCompraBtn");
+  const limpiarCarritoBtn = document.getElementById("limpiarCarritoBtn");
 
   const total = cart.reduce((acc, product) => acc + product.price, 0);
   totalContainer.textContent = "Total: $" + total.toFixed(2);
 
   if (total > 0) {
     realizarCompraBtn.style.display = "block";
+    limpiarCarritoBtn.style.display = "block";
   } else {
     realizarCompraBtn.style.display = "none";
+    limpiarCarritoBtn.style.display = "none";
   }
 }
 
+function limpiarCarrito() {
+  cart = [];
+  guardarCarritoEnLocalStorage();
+  mostrarCarrito();
+
+  Swal.fire({
+    icon: 'success',
+    title: '¡Carrito limpiado!',
+    text: 'Se ha vaciado el carrito de compras.',
+    showConfirmButton: false,
+    timer: 2000
+  });
+}
 
 function eliminarDelCarrito(title) {
   cart = cart.filter(product => product.title !== title);
   guardarCarritoEnLocalStorage();
   mostrarCarrito();
+  mostrarMensajeProductoEliminado(title);
 }
 
-
+function mostrarMensajeProductoEliminado(productTitle) {
+  Swal.fire({
+    icon: 'success',
+    title: 'Producto eliminado',
+    text: 'Se ha eliminado del carrito: ' + productTitle,
+    timer: 2000,
+    showConfirmButton: false
+  });
+}
 // Filtro
 
 let products = [];
 
-// Obtener datos del archivo products.json
-fetch('../json/products.json')
-  .then(response => response.json())
-  .then(data => {
-    products = data.products;
+async function obtenerDatosProductsJSON() {
+  try {
+    const response = await fetch('../json/products.json');
+    const data = await response.json();
+    return data.products;
+  } catch (error) {
+    console.error('Error al obtener los datos del archivo products.json:', error);
+    return [];
+  }
+}
+
+async function cargarProductos() {
+  try {
+    products = await obtenerDatosProductsJSON();
     cargarFiltro();
-  })
-  .catch(error => console.error('Error al obtener los datos del archivo products.json:', error));
+  } catch (error) {
+    console.error('Error al cargar los productos:', error);
+  }
+}
+
+cargarProductos();
+
 
 function cargarFiltro() {
   const uniqueCategories = [...new Set(products.map(product => product.description))];

@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function mostrarPopup(mensaje) {
-  // Crear el formulario de registro como un popup
   const popupDiv = document.createElement('div');
   popupDiv.classList.add('popup');
   popupDiv.innerHTML = `
@@ -115,18 +114,14 @@ function guardarRegistro(nombre, apellido, email, contraseña) {
     contraseña
   };
 
-  // Obtener el arreglo de registros almacenado en el localStorage o crear un nuevo arreglo si no existe
   let registrosGuardados = JSON.parse(localStorage.getItem('registros')) || [];
 
-  // Agregar el nuevo registro al arreglo
   registrosGuardados.push(registro);
 
-  // Almacenar el arreglo actualizado en el localStorage
   localStorage.setItem('registros', JSON.stringify(registrosGuardados));
 }
 
 function mostrarMensajeRegistroExitoso() {
-  // Crear un mensaje de registro exitoso
   const mensajeDiv = document.createElement('div');
   mensajeDiv.classList.add('mensaje-registro');
   mensajeDiv.innerHTML = `
@@ -135,10 +130,8 @@ function mostrarMensajeRegistroExitoso() {
     </div>
   `;
 
-  // Agregar el mensaje al cuerpo del documento
   document.body.appendChild(mensajeDiv);
-
-  // Ocultar el mensaje después de 3 segundos
+ 
   setTimeout(() => {
     mensajeDiv.classList.add('animate__fadeOut');
     setTimeout(() => {

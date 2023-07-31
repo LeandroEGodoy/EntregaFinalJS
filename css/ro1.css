@@ -613,4 +613,70 @@ h1 {
   animation-name: fadeOut;
 }
 
+/* Estilos para los botones */
+.buttonGif {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F77737; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón de realizar compra */
+#realizarCompraBtn, #limpiarCarritoBtn {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+.buttonGif:hover, #realizarCompraBtn:hover, #limpiarCarritoBtn:hover {
+  background-color: #E65100; /* Color de fondo al pasar el mouse */
+}
+
+.deleteButton {
+  padding: 5px 10px;
+  background-color: #D32F2F; /* Color de fondo para el botón de eliminar */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px; /* Espaciado entre botones de eliminar */
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #B71C1C; /* Color de fondo al pasar el mouse */
+}
+
+.buttonGif {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F77737; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Espaciado entre botones de realizar compra y limpiar carrito */
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+.buttonGif:hover {
+  background-color: #E65100; /* Color de fondo al pasar el mouse */
+}
+
 /*# sourceMappingURL=ro1.css.map */
